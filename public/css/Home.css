@@ -1,0 +1,200 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .tc{
+    color: black;
+  }
+  
+  #bar{
+    background-color: #FCF6BD;
+  }
+  
+  #font{
+    font-family: "Yomogi", cursive;
+    text-align: center;
+    margin-bottom: 5rem;
+    font-size: 5rem;
+    color: #9B7777;
+    padding-bottom: 5rem;
+  }
+  
+  #font-ft,#footer1{
+    font-family: "Yomogi", cursive;
+    text-align: center;
+    font-size: 3rem;
+    padding: 0.5rem 0rem;
+  }
+  
+  .landing{
+    background-image: url("/public/img/Logo\ 2.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-top: 15rem;
+    margin-bottom: 1rem;
+  }
+  
+  .bartop{
+    margin-top: 1rem;
+    padding: 0rem 13rem;
+    
+  }
+  
+  /* Customize the active background color */
+  .nav-pills .nav-link.active,
+  .nav-pills .show>.nav-link {
+    background-color: #FFDAA1;
+    /* Your desired color */
+    color: black;
+  }
+  
+  .card{
+    margin: 5rem 3rem;
+  }
+  
+  .radis{
+    border-radius: 2rem;
+    margin-top: 7rem;
+    width: 90rem;
+    padding-left: 6.5%;
+  }
+  
+  #ground1{
+    background-color: #FFF8B8;
+    border-radius: 1rem;
+    padding: 1.5rem;
+  }
+  
+  .card, .radis, .bartop, .picture{
+    object-fit: cover;
+    max-width: 100%;
+    
+  }
+  
+  #ground1, #ground2{
+    object-fit: cover;
+    max-width: 100%; 
+  }
+  
+  
+  /* ///// */
+  #nav00 {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 100px;
+    align-items: center;
+  
+  }
+  
+  #left {
+    display: flex;
+    flex-direction: column;
+  
+  }
+  
+  #left h3 {
+    color: #5A9ABF;
+  }
+  
+  #left button {
+    background-color: transparent;
+    border: none;
+    color: #604343;
+  }
+  
+  #right {
+    color: #604343;
+  
+  }
+  
+  body {
+    background-color: #FCF6BD;
+    padding: 20px;
+  }
+  
+  .bg {
+    background-color: #C0E4F6;
+    border-radius: 3rem;
+    min-width: 1000px;
+    min-height: 500px;
+  }
+  
+  input {
+    background-color: #FFD3E7;
+    width: 25rem;
+    height: 2rem;
+    border: none;
+    border-radius: 20px;
+    padding: 15px;
+    box-sizing: border-box;
+  }
+  
+  input::placeholder {
+    color: #BD5E5E;
+  }
+  
+  table {
+    border-radius: 20px;
+  }
+  
+  #Available {
+    width: 5.5rem;
+    background-color: #92ffbe;
+    text-align: center;
+    border-radius: 15px;
+  
+  }
+  
+  #Edit {
+    background-color: #FFBBDA;
+    border: none;
+    width: 5.5rem;
+    border-radius: 15px;
+  }
+  #Add {
+    background-color: #99CCEB;
+    border: none;
+    width: 5.5rem;
+    border-radius: 15px;
+  }
+  
+  
+  
+  .table td{
+  
+    background-color: #F8F0FF;
+    text-align: center;
+  }
+  .table th {
+    background-color: #F9E7EF;
+  
+  }
+  
+  #namebook{
+    font-size: 1rem;
+    color: #000000;
+    font-weight: bold;
+  }
+  
+  #li1{
+    justify-content: end;
+  }
+  
+  #stbtn{
+    background-color: #92FFBE;
+    border: 1px solid #92FFBE;
+    border-radius: 0.5rem;
+    width: 6rem;
+  }
+  
+  #stbtn1{
+    background-color: #FF8D8D;
+    border: 1px solid #FF8D8D;
+    border-radius: 0.5rem;
+    width: 6rem;
+  }
+  
+  
+  @import url('https://fonts.googleapis.com/css2?family=Yomogi&display=swap')

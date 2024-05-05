@@ -1,0 +1,1121 @@
+let mydata =`[
+    {
+     "ID": 1,
+     "Image": "b1.jpg",
+     "Name": "The mind",
+     "Category": "borad game",
+     "Lender": "Jhon",
+     "Status": 1
+    },
+    {
+     "ID": 2,
+     "Image": "b2.jpg",
+     "Name": "Sitting Duck Gallery",
+     "Category": "borad game",
+     "Lender": "Jhon",
+     "Status": 0
+    },
+    {
+     "ID": 3,
+     "Image": "b3.jpg",
+     "Name": "Exploding Kitten",
+     "Category": "borad game",
+     "Lender": "Jhon",
+     "Status": 0
+    },
+    {
+     "ID": 4,
+     "Image": "b4.jpg",
+     "Name": "When i dream",
+     "Category": "borad game",
+     "Lender": "Tony",
+     "Status": 0
+    },
+    {
+     "ID": 5,
+     "Image": "b5.jpg",
+     "Name": "Dixit",
+     "Category": "borad game",
+     "Lender": "Tony",
+     "Status": 0
+    },
+    {
+     "ID": 6,
+     "Image": "b6.jpg",
+     "Name": "Detective Club",
+     "Category": "borad game",
+     "Lender": "Lisa",
+     "Status": 0
+    },
+    {
+     "ID": 7,
+     "Image": "b7.jpg",
+     "Name": "Salem 1692",
+     "Category": "borad game",
+     "Lender": "Jhon",
+     "Status": 0
+    },
+    {
+     "ID": 8,
+     "Image": "b8.jpg",
+     "Name": "2nd Edition",
+     "Category": "borad game",
+     "Lender": "Jhon",
+     "Status": 0
+    },
+    {
+     "ID": 9,
+     "Image": "b9.jpg",
+     "Name": "Modeen Art",
+     "Category": "borad game",
+     "Lender": "Jhon",
+     "Status": 0
+    },
+    {
+     "ID": 10,
+     "Image": "b10.jpg",
+     "Name": "Splendor",
+     "Category": "borad game",
+     "Lender": "Jhon",
+     "Status": 0
+    },
+    {
+     "ID": 11,
+     "Image": "b11.jpg",
+     "Name": "Newton",
+     "Category": "borad game",
+     "Lender": "Jhon",
+     "Status": 0
+    },
+    {
+     "ID": 12,
+     "Image": "b12.jpg",
+     "Name": "The Settlers of Catan",
+     "Category": "borad game",
+     "Lender": "Lisa",
+     "Status": 0
+    },
+    {
+     "ID": 13,
+     "Image": "b13.jpg",
+     "Name": "Pandemic",
+     "Category": "borad game",
+     "Lender": "Lisa",
+     "Status": 0
+    },
+    {
+     "ID": 14,
+     "Image": "b14.jpg",
+     "Name": "THE ELEMENT",
+     "Category": "borad game",
+     "Lender": "Lisa",
+     "Status": 0
+    },
+    {
+     "ID": 15,
+     "Image": "b15.jpg",
+     "Name": "ORGANS GO!",
+     "Category": "borad game",
+     "Lender": "Jhon",
+     "Status": 0
+    },
+    {
+     "ID": 16,
+     "Image": "b16.jpg",
+     "Name": "PHUKET : HOTEL TYCOON",
+     "Category": "borad game",
+     "Lender": "Tony",
+     "Status": 0
+    },
+    {
+     "ID": 17,
+     "Image": "b17.jpg",
+     "Name": "Metsovo",
+     "Category": "borad game",
+     "Lender": "Lisa",
+     "Status": 0
+    },
+    {
+     "ID": 18,
+     "Image": "b18.jpg",
+     "Name": "DEFUSE",
+     "Category": "borad game",
+     "Lender": "Lisa",
+     "Status": 0
+    },
+    {
+     "ID": 19,
+     "Image": "b19.jpg",
+     "Name": "WANA",
+     "Category": "borad game",
+     "Lender": "Lisa",
+     "Status": 0
+    },
+    {
+     "ID": 20,
+     "Image": "b20.jpg",
+     "Name": "Flower Shop",
+     "Category": "borad game",
+     "Lender": "Lisa",
+     "Status": 0
+    },
+    {
+     "ID": 21,
+     "Image": "b21.jpg",
+     "Name": "Meeple Detective",
+     "Category": "borad game",
+     "Lender": "Tony",
+     "Status": 0
+    },
+    {
+     "ID": 22,
+     "Image": "b22.jpg",
+     "Name": "Tale of Carrot : Rise of Heros",
+     "Category": "borad game",
+     "Lender": "Tony",
+     "Status": 0
+    },
+    {
+     "ID": 23,
+     "Image": "b23.jpg",
+     "Name": "Mogel Motte",
+     "Category": "borad game",
+     "Lender": "Tony",
+     "Status": 0
+    },
+    {
+     "ID": 24,
+     "Image": "b24.jpg",
+     "Name": "Deception",
+     "Category": "borad game",
+     "Lender": "Tony",
+     "Status": 0
+    },
+    {
+     "ID": 25,
+     "Image": "b25.jpg",
+     "Name": "Secret Hitler",
+     "Category": "borad game",
+     "Lender": "Lisa",
+     "Status": 0
+    },
+    {
+     "ID": 26,
+     "Image": "b26.jpg",
+     "Name": "Geistes Blitz",
+     "Category": "borad game",
+     "Lender": "Tony",
+     "Status": 0
+    },
+    {
+     "ID": 27,
+     "Image": "b27.jpg",
+     "Name": "Citadels",
+     "Category": "borad game",
+     "Lender": "Tony",
+     "Status": 0
+    },
+    {
+     "ID": 28,
+     "Image": "b28.jpg",
+     "Name": "Ultimate Werewolf",
+     "Category": "borad game",
+     "Lender": "Jhon",
+     "Status": 0
+    },
+    {
+     "ID": 29,
+     "Image": "b29.jpg",
+     "Name": "One Night Ultimate Werewolf",
+     "Category": "borad game",
+     "Lender": "Tony",
+     "Status": 0
+    },
+    {
+     "ID": 30,
+     "Image": "b30.jpg",
+     "Name": "Chinatown",
+     "Category": "borad game",
+     "Lender": "Lisa",
+     "Status": 0
+    },
+    {
+     "ID": 31,
+     "Image": "b31.jpg",
+     "Name": "Codenames Pictures",
+     "Category": "borad game",
+     "Lender": "Lisa",
+     "Status": 0
+    },
+    {
+     "ID": 32,
+     "Image": "b32.jpg",
+     "Name": "Spyfall",
+     "Category": "borad game",
+     "Lender": "Lisa",
+     "Status": 0
+    },
+    {
+     "ID": 33,
+     "Image": "b33.jpg",
+     "Name": "Survive from the Atlantis!",
+     "Category": "borad game",
+     "Lender": "Lisa",
+     "Status": 0
+    },
+    {
+     "ID": 34,
+     "Image": "b34.jpg",
+     "Name": "Avalon",
+     "Category": "borad game",
+     "Lender": "Lisa",
+     "Status": 0
+    },
+    {
+     "ID": 35,
+     "Image": "b35.jpg",
+     "Name": "Uno Flip!",
+     "Category": "borad game",
+     "Lender": "Tony",
+     "Status": 0
+    },
+    {
+     "ID": 36,
+     "Image": "b36.jpg",
+     "Name": "Happy salmon",
+     "Category": "borad game",
+     "Lender": "Tony",
+     "Status": 0
+    },
+    {
+     "ID": 37,
+     "Image": "b37.jpg",
+     "Name": "Die Fiesen 7",
+     "Category": "borad game",
+     "Lender": "Tony",
+     "Status": 0
+    },
+    {
+     "ID": 38,
+     "Image": "b38.jpg",
+     "Name": "Fallout Shelter",
+     "Category": "borad game",
+     "Lender": "Tony",
+     "Status": 0
+    },
+    {
+     "ID": 39,
+     "Image": "book1.jpg",
+     "Name": "Pissing about",
+     "Category": "book",
+     "Lender": "Jhon",
+     "Status": 0
+    },
+    {
+     "ID": 40,
+     "Image": "book2.jpg",
+     "Name": "tender wings of desire",
+     "Category": "book",
+     "Lender": "Lisa",
+     "Status": 0
+    },
+    {
+     "ID": 41,
+     "Image": "book3.jpg",
+     "Name": "Only Yesterday",
+     "Category": "book",
+     "Lender": "Tony",
+     "Status": 0
+    },
+    {
+     "ID": 42,
+     "Image": "book4.jpg",
+     "Name": "Bitch slapped with a salmon",
+     "Category": "book",
+     "Lender": "Jhon",
+     "Status": 0
+    },
+    {
+     "ID": 43,
+     "Image": "book5.jpg",
+     "Name": "everyone shut the fuck up!",
+     "Category": "book",
+     "Lender": "Jhon",
+     "Status": 0
+    },
+    {
+     "ID": 44,
+     "Image": "book6.jpg",
+     "Name": "cowboy dan",
+     "Category": "book",
+     "Lender": "Jhon",
+     "Status": 0
+    },
+    {
+     "ID": 45,
+     "Image": "book7.jpg",
+     "Name": "found it on etsy",
+     "Category": "book",
+     "Lender": "Tony",
+     "Status": 0
+    },
+    {
+     "ID": 46,
+     "Image": "book8.jpg",
+     "Name": "the famous five caravan",
+     "Category": "book",
+     "Lender": "Lisa",
+     "Status": 0
+    },
+    {
+     "ID": 47,
+     "Image": "book9.jpg",
+     "Name": "the twin at st clears",
+     "Category": "book",
+     "Lender": "Tony",
+     "Status": 0
+    },
+    {
+     "ID": 48,
+     "Image": "book10.jpg",
+     "Name": "walking home to rosie lee",
+     "Category": "book",
+     "Lender": "Lisa",
+     "Status": 0
+    },
+    {
+     "ID": 49,
+     "Image": "book11.jpg",
+     "Name": "blue glub blue",
+     "Category": "book",
+     "Lender": "Tony",
+     "Status": 0
+    },
+    {
+     "ID": 50,
+     "Image": "book12.jpg",
+     "Name": "gsmes you canplay withyour pussy",
+     "Category": "book",
+     "Lender": "Lisa",
+     "Status": 0
+    },
+    {
+     "ID": 51,
+     "Image": "book13.jpg",
+     "Name": "pinocchio",
+     "Category": "book",
+     "Lender": "Lisa",
+     "Status": 0
+    },
+    {
+     "ID": 52,
+     "Image": "book14.jpg",
+     "Name": "charlie brown",
+     "Category": "book",
+     "Lender": "Tony",
+     "Status": 0
+    },
+    {
+     "ID": 53,
+     "Image": "book15.jpg",
+     "Name": "brexit campaign leaders",
+     "Category": "book",
+     "Lender": "Tony",
+     "Status": 0
+    },
+    {
+     "ID": 54,
+     "Image": "book16.jpg",
+     "Name": "the dick ripper",
+     "Category": "book",
+     "Lender": "Jhon",
+     "Status": 0
+    },
+    {
+     "ID": 55,
+     "Image": "book17.jpg",
+     "Name": "the art of catkwondo",
+     "Category": "book",
+     "Lender": "Tony",
+     "Status": 0
+    },
+    {
+     "ID": 56,
+     "Image": "book18.jpg",
+     "Name": "a taste of blackberries",
+     "Category": "book",
+     "Lender": "Lisa",
+     "Status": 0
+    },
+    {
+     "ID": 57,
+     "Image": "book19.jpg",
+     "Name": "big jabe",
+     "Category": "book",
+     "Lender": "Jhon",
+     "Status": 0
+    },
+    {
+     "ID": 58,
+     "Image": "book20.jpg",
+     "Name": "hardy boys",
+     "Category": "book",
+     "Lender": "Lisa",
+     "Status": 0
+    },
+    {
+     "ID": 59,
+     "Image": "book21.jpg",
+     "Name": "antenna theory",
+     "Category": "book",
+     "Lender": "Jhon",
+     "Status": 0
+    },
+    {
+     "ID": 60,
+     "Image": "book22.jpg",
+     "Name": "what bird did that",
+     "Category": "book",
+     "Lender": "Tony",
+     "Status": 0
+    },
+    {
+     "ID": 61,
+     "Image": "book23.jpg",
+     "Name": "attack of the robot chicken",
+     "Category": "book",
+     "Lender": "Tony",
+     "Status": 0
+    },
+    {
+     "ID": 62,
+     "Image": "book24.jpg",
+     "Name": "let's ride with strangers and other rhymes",
+     "Category": "book",
+     "Lender": "Jhon",
+     "Status": 0
+    },
+    {
+     "ID": 63,
+     "Image": "book25.jpg",
+     "Name": "mail orderred mommies",
+     "Category": "book",
+     "Lender": "Lisa",
+     "Status": 0
+    },
+    {
+     "ID": 64,
+     "Image": "book26.jpg",
+     "Name": "lassie ate a cub scout",
+     "Category": "book",
+     "Lender": "Tony",
+     "Status": 0
+    },
+    {
+     "ID": 65,
+     "Image": "book27.jpg",
+     "Name": "battery systems engineering",
+     "Category": "book",
+     "Lender": "Jhon",
+     "Status": 0
+    },
+    {
+     "ID": 66,
+     "Image": "book28.jpg",
+     "Name": "Biodiesel",
+     "Category": "book",
+     "Lender": "Jhon",
+     "Status": 0
+    },
+    {
+     "ID": 67,
+     "Image": "book29.jpg",
+     "Name": "bioluminescence",
+     "Category": "book",
+     "Lender": "Jhon",
+     "Status": 0
+    },
+    {
+     "ID": 68,
+     "Image": "book30.jpg",
+     "Name": "biosensors and bioelectronics",
+     "Category": "book",
+     "Lender": "Jhon",
+     "Status": 0
+    },
+    {
+     "ID": 69,
+     "Image": "book31.jpg",
+     "Name": "the mystery of tally-ho cottage",
+     "Category": "book",
+     "Lender": "Lisa",
+     "Status": 0
+    },
+    {
+     "ID": 70,
+     "Image": "book32.jpg",
+     "Name": "sorry boy",
+     "Category": "book",
+     "Lender": "Tony",
+     "Status": 0
+    },
+    {
+     "ID": 71,
+     "Image": "book33.jpg",
+     "Name": "the cat in the hat comes back",
+     "Category": "book",
+     "Lender": "Tony",
+     "Status": 0
+    },
+    {
+     "ID": 72,
+     "Image": "book34.jpg",
+     "Name": "billy",
+     "Category": "book",
+     "Lender": "Lisa",
+     "Status": 0
+    },
+    {
+     "ID": 73,
+     "Image": "book35.jpg",
+     "Name": "geoige",
+     "Category": "book",
+     "Lender": "Jhon",
+     "Status": 0
+    },
+    {
+     "ID": 74,
+     "Image": "book36.jpg",
+     "Name": "was it down there did you get it",
+     "Category": "book",
+     "Lender": "Tony",
+     "Status": 0
+    },
+    {
+     "ID": 75,
+     "Image": "book37.jpg",
+     "Name": "electronic devices",
+     "Category": "book",
+     "Lender": "Lisa",
+     "Status": 0
+    },
+    {
+     "ID": 76,
+     "Image": "book38.jpg",
+     "Name": "op amp applications handbook",
+     "Category": "book",
+     "Lender": "Tony",
+     "Status": 0
+    },
+    {
+     "ID": 77,
+     "Image": "book39.jpg",
+     "Name": "advanced potion making",
+     "Category": "book",
+     "Lender": "Lisa",
+     "Status": 0
+    },
+    {
+     "ID": 78,
+     "Image": "book40.jpg",
+     "Name": "end zone",
+     "Category": "book",
+     "Lender": "Tony",
+     "Status": 0
+    },
+    {
+     "ID": 79,
+     "Image": "acer aspire 5.webp",
+     "Name": "Acer Aspire 5",
+     "Category": "Notebook",
+     "Lender": "Jhon",
+     "Status": 0
+    },
+    {
+     "ID": 80,
+     "Image": "ipad 1oth gen.jpeg",
+     "Name": "iPad (10th generation)",
+     "Category": "Tablet",
+     "Lender": "Lisa",
+     "Status": 0
+    },
+    {
+     "ID": 81,
+     "Image": "ipad air 5.jpeg",
+     "Name": "Ipad air 5",
+     "Category": "Tablet",
+     "Lender": "Tony",
+     "Status": 0
+    },
+    {
+     "ID": 82,
+     "Image": "asus vivobook 15.png",
+     "Name": "Asus Vivobook 15",
+     "Category": "Notebook",
+     "Lender": "Jhon",
+     "Status": 0
+    },
+    {
+     "ID": 83,
+     "Image": "lenovo ideapad slim 3.jpeg",
+     "Name": "Lenovo IdeaPad Slim 3i",
+     "Category": "Notebook",
+     "Lender": "Jhon",
+     "Status": 0
+    },
+    {
+     "ID": 84,
+     "Image": "lenovo ideapad 3.png",
+     "Name": "Lenovo ideapad 3",
+     "Category": "Notebook",
+     "Lender": "Jhon",
+     "Status": 0
+    },
+    {
+     "ID": 85,
+     "Image": "asus v16.webp",
+     "Name": "Asus Vivobook 16",
+     "Category": "Notebook",
+     "Lender": "Tony",
+     "Status": 0
+    },
+    {
+     "ID": 86,
+     "Image": "he.jpeg",
+     "Name": "HP 15 Laptop",
+     "Category": "Notebook",
+     "Lender": "Lisa",
+     "Status": 0
+    },
+    {
+     "ID": 87,
+     "Image": "asus vivobook 15.png",
+     "Name": "ASUS VivoBook 15",
+     "Category": "Notebook",
+     "Lender": "Tony",
+     "Status": 0
+    },
+    {
+     "ID": 88,
+     "Image": "dell inspiron 3000.jpeg",
+     "Name": "Dell Inspiron 3000 Series",
+     "Category": "Notebook",
+     "Lender": "Lisa",
+     "Status": 0
+    },
+    {
+     "ID": 89,
+     "Image": "acer chromebook spin 311.jepg",
+     "Name": "Acer Chromebook Spin 311",
+     "Category": "Notebook",
+     "Lender": "Tony",
+     "Status": 0
+    },
+    {
+     "ID": 90,
+     "Image": "hp chromebook 14.jpeg",
+     "Name": "HP Chromebook 14",
+     "Category": "Notebook",
+     "Lender": "Lisa",
+     "Status": 0
+    },
+    {
+     "ID": 91,
+     "Image": "lenovo chromebook duet .png",
+     "Name": "Lenovo Chromebook Duet",
+     "Category": "Notebook",
+     "Lender": "Lisa",
+     "Status": 0
+    },
+    {
+     "ID": 92,
+     "Image": "asus chromebook c202xa.jpeg",
+     "Name": "ASUS Chromebook C202XA",
+     "Category": "Notebook",
+     "Lender": "Tony",
+     "Status": 0
+    },
+    {
+     "ID": 93,
+     "Image": "dell inspiron 14 3000 series.webp",
+     "Name": "Dell Inspiron 14 3000 Series",
+     "Category": "Notebook",
+     "Lender": "Tony",
+     "Status": 0
+    },
+    {
+     "ID": 94,
+     "Image": "hp pavilion x360.jpeg",
+     "Name": "HP Pavilion x360",
+     "Category": "Notebook",
+     "Lender": "Jhon",
+     "Status": 0
+    },
+    {
+     "ID": 95,
+     "Image": "lenovo.jpg",
+     "Name": "Lenovo Flex 5",
+     "Category": "Notebook",
+     "Lender": "Tony",
+     "Status": 0
+    },
+    {
+     "ID": 96,
+     "Image": "asus vivobook flip 14.jpeg",
+     "Name": "ASUS VivoBook Flip 14",
+     "Category": "Notebook",
+     "Lender": "Lisa",
+     "Status": 0
+    },
+    {
+     "ID": 97,
+     "Image": "acer spin 3.webp",
+     "Name": "Acer Spin 3",
+     "Category": "Notebook",
+     "Lender": "Jhon",
+     "Status": 0
+    },
+    {
+     "ID": 98,
+     "Image": "dell inspiron 14 2 in 1.png",
+     "Name": "Dell Inspiron 14 2-in-1",
+     "Category": "Notebook",
+     "Lender": "Lisa",
+     "Status": 0
+    },
+    {
+     "ID": 99,
+     "Image": "lif5.jpeg",
+     "Name": "Lenovo IdeaPad Flex 5",
+     "Category": "Notebook",
+     "Lender": "Jhon",
+     "Status": 0
+    },
+    {
+     "ID": 100,
+     "Image": "hp.jpeg",
+     "Name": "HP Pavilion 14",
+     "Category": "Notebook",
+     "Lender": "Tony",
+     "Status": 0
+    },
+    {
+     "ID": 101,
+     "Image": "asus vivobook 15.png",
+     "Name": "ASUS VivoBook 14",
+     "Category": "Notebook",
+     "Lender": "Tony",
+     "Status": 0
+    },
+    {
+     "ID": 102,
+     "Image": "aa5s.jpg",
+     "Name": "Acer Aspire 5 Slim",
+     "Category": "Notebook",
+     "Lender": "Jhon",
+     "Status": 0
+    },
+    {
+     "ID": 103,
+     "Image": "dell inspiron 14 2 in 1.png",
+     "Name": "Dell Inspiron 15 3000 2-in-1",
+     "Category": "Notebook",
+     "Lender": "Lisa",
+     "Status": 0
+    },
+    {
+     "ID": 104,
+     "Image": "ipad 9th gen.webp",
+     "Name": "iPad (9th generation)",
+     "Category": "Tablet",
+     "Lender": "Tony",
+     "Status": 0
+    },
+    {
+     "ID": 105,
+     "Image": "ipad air 3rd gen.jpeg",
+     "Name": "iPad Air (3rd generation)",
+     "Category": "Tablet",
+     "Lender": "Jhon",
+     "Status": 0
+    },
+    {
+     "ID": 106,
+     "Image": "ipad mini 6th gen.jpeg",
+     "Name": "iPad mini (6th generation)",
+     "Category": "Tablet",
+     "Lender": "Jhon",
+     "Status": 0
+    },
+    {
+     "ID": 107,
+     "Image": "ipad 8th gen.jpg",
+     "Name": "iPad (8th generation)",
+     "Category": "Tablet",
+     "Lender": "Jhon",
+     "Status": 0
+    },
+    {
+     "ID": 108,
+     "Image": "ipad mini 6th gen.jpeg",
+     "Name": "iPad mini (5th generation)",
+     "Category": "Tablet",
+     "Lender": "Jhon",
+     "Status": 0
+    },
+    {
+     "ID": 109,
+     "Image": "ipad air 5.jpeg",
+     "Name": "iPad Air (4th generation)",
+     "Category": "Tablet",
+     "Lender": "Lisa",
+     "Status": 0
+    },
+    {
+     "ID": 110,
+     "Image": "ipad pro 10.5,11,12.9 inch.jpeg",
+     "Name": "iPad Pro 10.5-inch",
+     "Category": "Tablet",
+     "Lender": "Tony",
+     "Status": 0
+    },
+    {
+     "ID": 111,
+     "Image": "ipad pro 10.5,11,12.9 inch.jpeg",
+     "Name": "iPad Pro 11-inch",
+     "Category": "Tablet",
+     "Lender": "Tony",
+     "Status": 0
+    },
+    {
+     "ID": 112,
+     "Image": "ipad pro 10.5,11,12.9 inch.jpeg",
+     "Name": "iPad Pro 12.9-inch",
+     "Category": "Tablet",
+     "Lender": "Lisa",
+     "Status": 0
+    },
+    {
+     "ID": 113,
+     "Image": "asg.jpeg",
+     "Name": "Acer Swift Go",
+     "Category": "Notebook",
+     "Lender": "Jhon",
+     "Status": 0
+    },
+    {
+     "ID": 114,
+     "Image": "msi modern 15.png",
+     "Name": "MSI Modern 15",
+     "Category": "Notebook",
+     "Lender": "Tony",
+     "Status": 0
+    },
+    {
+     "ID": 115,
+     "Image": "lenovo ideapad 1.jpeg",
+     "Name": "Lenovo IdeaPad 1",
+     "Category": "Notebook",
+     "Lender": "Lisa",
+     "Status": 0
+    },
+    {
+     "ID": 116,
+     "Image": "dell.webp",
+     "Name": "Dell Vostro 3430",
+     "Category": "Notebook",
+     "Lender": "Tony",
+     "Status": 0
+    },
+    {
+     "ID": 117,
+     "Image": "msi modern 15.png",
+     "Name": "MSI Modern 14",
+     "Category": "Notebook",
+     "Lender": "Lisa",
+     "Status": 0
+    },
+    {
+     "ID": 118,
+     "Image": "hp 15s-ea2226au.jpeg",
+     "Name": "HP 15s-eq2226AU",
+     "Category": "Notebook",
+     "Lender": "Tony",
+     "Status": 0
+    },
+    {
+     "ID": 119,
+     "Image": "lenovo v15 gen 3.avif",
+     "Name": "Lenovo V15 Gen 3",
+     "Category": "Notebook",
+     "Lender": "Tony",
+     "Status": 0
+    },
+    {
+     "ID": 120,
+     "Image": "hp labtop 15s-eq5154u.avif",
+     "Name": "HP Laptop 15s-eq5154TU",
+     "Category": "Notebook",
+     "Lender": "Lisa",
+     "Status": 0
+    },
+    {
+     "ID": 121,
+     "Image": "ipad 9th gen.webp",
+     "Name": "iPad (9th generation)",
+     "Category": "Tablet",
+     "Lender": "Lisa",
+     "Status": 0
+    },
+    {
+     "ID": 122,
+     "Image": "ipad air 3rd gen.jpeg",
+     "Name": "iPad Air (3rd generation)",
+     "Category": "Tablet",
+     "Lender": "Jhon",
+     "Status": 0
+    },
+    {
+     "ID": 123,
+     "Image": "ipad mini 6th gen.jpeg",
+     "Name": "iPad mini (6th generation)",
+     "Category": "Tablet",
+     "Lender": "Lisa",
+     "Status": 0
+    },
+    {
+     "ID": 124,
+     "Image": "ipad 8th gen.jpg",
+     "Name": "iPad (8th generation)",
+     "Category": "Tablet",
+     "Lender": "Tony",
+     "Status": 0
+    },
+    {
+     "ID": 125,
+     "Image": "ipad air 5.jpeg",
+     "Name": "iPad Air (4th generation)",
+     "Category": "Tablet",
+     "Lender": "Tony",
+     "Status": 0
+    },
+    {
+     "ID": 126,
+     "Image": "ipad pro 10.5,11,12.9 inch.jpeg",
+     "Name": "iPad Pro 10.5-inch",
+     "Category": "Tablet",
+     "Lender": "Jhon",
+     "Status": 0
+    },
+    {
+     "ID": 127,
+     "Image": "ipad pro 10.5,11,12.9 inch.jpeg",
+     "Name": "iPad Pro 11-inch",
+     "Category": "Tablet",
+     "Lender": "Lisa",
+     "Status": 0
+    },
+    {
+     "ID": 128,
+     "Image": "ipad pro 10.5,11,12.9 inch.jpeg",
+     "Name": "iPad Pro 12.9-inch",
+     "Category": "Tablet",
+     "Lender": "Lisa",
+     "Status": 0
+    }
+   ]`
+Alldata = JSON.parse(mydata)
+let Category = 1;
+function showcard(n){
+    Category = n
+    let card =""
+    
+    if(Category == 1){
+        card =  Alldata.filter(d=>d.Category=="book")
+    }
+    else if(Category==2){
+        card =  Alldata.filter(d=>d.Category=="borad game")
+    }
+    else if(Category==3){
+        card =  Alldata.filter(d=>d.Category!="borad game" && d.Category!="book")
+    }
+    let Mystatus;
+
+    //console.log(Category)
+    let Carddata = ""
+    card.forEach(element => {
+        if (element.Status === 0) {
+            Mystatus = "Available";
+          } else if (element.Status === 1) {
+            Mystatus = "Disable";
+          } else if (element.Status === 2) {
+            Mystatus = "Panding";
+          } else if (element.Status === 3) {
+            Mystatus = "Brorrwed";
+          }
+        Carddata +=
+        `
+        <div class="card mt-5"">
+          <div class="w">
+          <img src="/public/img/DATA_IMG/${element.Image}" class="card-img-top">
+          </div>
+          <div class="card-body d-flex flex-column align-items-center ">
+             <h4 class="card-title">${element.Name}</h4>
+             <p class="card-text mt-3"><div class="${Mystatus}">${Mystatus}</div></p>
+             `
+             if(element.Status==0){Carddata+=`<button class="btn_card" onclick=Borrowe(${element.ID})>Borrowe</button>`}
+             Carddata +=`
+             
+          </div>
+        </div>
+        `
+    });
+    document.querySelector("#show_card").innerHTML = Carddata
+}
+showcard(Category)
+
+
+
+const options = {
+  backdrop: "static",
+  keyboard: false,
+};
+const myModal = new bootstrap.Modal(
+  document.getElementById("modalId"),
+  options,
+);
+
+
+function Borrowe(ID){
+  index = Alldata.findIndex(function (Asset) {
+    return ID == Asset.ID
+  })
+  console.log(index)
+  // const Name = document.querySelector('#asset')
+  // const newCategory = document.querySelector('#category')
+  // const element = document.getElementById("sta");
+  const img = document.getElementById("img");
+  const id = document.getElementById("assetid");
+  const name = document.getElementById("h5");
+
+  // newName.value = boradgame[index].name
+  // newCategory.value = boradgame[index].category
+  // element.style.backgroundColor = "#92FFBE";
+
+  name.innerHTML =`${Alldata[index].Name}`;
+  id.innerHTML =`Asset ID : ${Alldata[index].ID}`;
+  img.innerHTML =`<img src='/public/img/DATA_IMG/${Alldata[index].Image}'>`
+  myModal.show()
+}
+
+
+
+
+
+
+
+
+
+
+
+

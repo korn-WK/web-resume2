@@ -1,0 +1,350 @@
+body {
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+    background-color: #00153a;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #3E528C; 
+    position: fixed;
+    width: 100vw;
+    z-index: 1000;
+    
+}
+#HISTORY{
+    background-color: #FEA736;
+    margin-top: 0px;
+    height: 60px;
+    color: #167A7A;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+nav button {
+    background-color: transparent;
+    border: none;
+    color: #604343;
+    margin-right: 10px;
+    color: white;
+}
+
+div input {
+    border: none;
+    background-color: #ffffff;
+    height: 1.5rem;
+    width: 15rem;
+    border-radius: 14px;
+    padding-left: 14px;
+    margin-right: 10px;
+    outline: none;
+}
+
+input::placeholder {
+    color: #BD9797;
+}
+
+nav img {
+    width: 100px;
+}
+
+#Profile {
+    height: 40px;
+    width: 40px;
+    background-color: #604343;
+    border-radius: 100%;
+}
+
+nav #right {
+    display: flex;
+    align-items: center;
+    margin-right: 50px;
+
+}
+
+.landing {
+    background-image: url("/public/img/Logo\ 2.svg");
+    width: 400px;
+    height: 400px;
+    background-position: center;
+    margin-top: 50px;
+    text-align: center;
+
+}
+.landing h1{
+ margin-top: 100px;
+ position: absolute;
+ text-align: center;
+ left: 34%;
+ top: 30%;
+}
+
+#font{
+    font-family: "Margarine", sans-serif;
+    text-align: center;
+    font-size: 5rem;
+    color: white;
+    text-shadow: 1px 1px 2px black, 0 0 25px yellowgreen, 0 0 5px darkblue;
+}
+
+#font-ft{
+    font-family: "Margarine", sans-serif;
+    text-align: center;
+    font-size: 3rem;
+    color: white;
+    text-shadow: 1px 1px 2px black, 0 0 25px yellowgreen, 0 0 5px darkblue;
+}
+
+/* Customize the active background color */
+.nav-pills .nav-link.active,
+.nav-pills .show>.nav-link {
+  background-color: #FFDAA1;
+  /* Your desired color */
+  color: black;
+}
+
+
+.bartop {
+    /* margin-top: 250px; */
+    margin-bottom: 50px;
+    padding: 0rem 13rem;
+    
+
+}
+.bartop li{
+    padding: 0rem 0rem;
+}
+
+
+#bar {
+    background-color: #FCF6BD;
+}
+
+
+
+#content-card {
+    
+    height: 700px;
+    width: 90%;
+    margin: auto;
+    background-color: #698BA6;
+    border-radius: 50px 0px 0px 50px;
+    padding: 50px;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+
+#content-table {
+    height: 800px;
+    width: 90%;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #FEA736;
+    border-radius: 50px;
+    padding: 50px;
+}
+
+#btnMY button {
+    border: none;
+    width: 10rem;
+    height: 2.5rem;
+    border-radius: 40px;
+    color: white;
+    background-color: #5A9ABF;
+    margin-left: 10px;
+}
+
+#btnMY {
+    margin-top: 10px;
+}
+
+.Available {
+    width: 5.5rem;
+    background-color: #92FFBE;
+    text-align: center;
+    border-radius: 15px;
+
+}
+
+.Disable {
+    width: 5.5rem;
+    background-color: #FF8D8D;
+    text-align: center;
+    border-radius: 15px;
+
+}
+
+.Panding {
+    width: 5.5rem;
+    background-color: #FFB37B;
+    text-align: center;
+    border-radius: 15px;
+
+}
+
+.Brorrwed {
+    width: 5.5rem;
+    background-color: #EBFF9A;
+    text-align: center;
+    border-radius: 15px;
+
+}
+.Return {
+    width: 5.5rem;
+    background-color: #5A9ABF;
+    text-align: center;
+    border-radius: 15px;
+
+}
+
+tbody img {
+    height: 64px;
+    border-radius: 14px;
+}
+
+.table td {
+    background-color: #F8F0FF;
+    text-align: center;
+    
+}
+.card{
+    width: 350px;
+    background-color: white;
+    height: 500px;
+    border-radius: 10px;
+}
+.card img{
+    height: 300px;
+    border-radius: 10px 10px 0px 0px;
+}
+.w{
+    background-color: white;
+    border-radius: 30px;
+}
+.btn_card{
+    border: none;
+    width: 10rem;
+    height: 2.5rem;
+    background-color: #167A7A;
+    font-weight: bold;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.table thead td{
+    background-color: #FEA736;
+    font-weight: bold;
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 100%;
+  }
+
+  
+
+  ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+  }
+
+  li {
+    list-style-type: none;
+    position: relative;
+    padding: 0.9rem 0.1rem;
+  }
+
+  li ul {
+    flex-direction: column;
+    position: absolute;
+    background-color: white;
+    align-items: flex-start;
+    transition: all 0.5s ease;
+    width: 20rem;
+    right: -3rem;
+    top: 4.5rem;
+    border-radius: 0.325rem;
+    gap: 0;
+    padding: 1rem 0rem;
+    opacity: 0;
+    box-shadow: 0px 0px 100px rgba(20, 18, 18, 0.25);
+    display: none;
+  }
+
+  ul li:hover>ul,
+  ul li ul:hover {
+    visibility: visible;
+    opacity: 1;
+    display: flex;
+  }
+
+  .material-icons-outlined {
+    color: #888888;
+    transition: all 0.3s ease-out;
+  }
+
+  .material-icons-outlined:hover {
+    color: #ff9800;
+    transform: scale(1.25) translateY(-4px);
+    cursor: pointer;
+  }
+
+
+  .profile {
+    height: 3rem;
+    width: auto;
+    cursor: pointer;
+  }
+
+  .sub-item {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 0.725rem;
+    cursor: pointer;
+    padding: 0.5rem 1.5rem;
+  }
+
+  .sub-item:hover {
+    background-color: rgba(232, 232, 232, 0.4);
+  }
+
+  .sub-item:hover .material-icons-outlined {
+    color: #ff9800;
+    transform: scale(1.08) translateY(-2px);
+    cursor: pointer;
+  }
+
+  .sub-item:hover p {
+    color: #000;
+    cursor: pointer;
+  }
+
+  .sub-item p {
+    font-size: 0.85rem;
+    color: #888888;
+    font-weight: 500;
+    margin: 0.4rem 0;
+    flex: 1;
+  }

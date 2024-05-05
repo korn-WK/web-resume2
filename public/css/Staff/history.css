@@ -1,0 +1,90 @@
+nav {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 100px;
+    align-items: center;
+
+}
+
+#left {
+    display: flex;
+    flex-direction: column;
+
+}
+
+#left h3 {
+    color: #5A9ABF;
+}
+
+nav button {
+    background-color: transparent;
+    border: none;
+    color: #604343;
+}
+
+#right {
+    color: #604343;
+
+}
+
+body {
+    background-color: #f9e7ef;
+    padding: 20px;
+}
+
+.bg {
+    background-color: #FFBBDA;
+    border-radius: 3rem;
+    min-width: 1000px;
+    min-height: 500px;
+}
+
+input {
+    background-color: #FFD3E7;
+    width: 25rem;
+    height: 2rem;
+    border: none;
+    border-radius: 20px;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+input::placeholder {
+    color: #BD5E5E;
+}
+
+table {
+    border-radius: 20px;
+}
+
+
+img {
+    max-width: 64px;
+}
+
+.table td{
+   
+    background-color: #F8F0FF;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+.table th {
+    background-color: #FFBBDA;
+    text-align: center; 
+   
+}
+
+#btnMY button{
+    border: none;
+    width: 10rem;
+    height: 2.5rem;
+    border-radius: 40px;
+    color: white;
+    background-color: #5A9ABF;
+    margin-left: 10px;
+}
+#btnMY{
+    margin-top: 20px;
+    margin-bottom: 2rem;
+}
+

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Finding</title>
+    <link rel="stylesheet" href="/public/bootstrap/css/bootstrap.min.css">
+    <script src="/public/bootstrap/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="/public/css/Staff/Dashborad.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="shortcut icon" href="/public/img/ICON2.png" type="image/x-icon">
+</head>
+
+<body>
+    <!-- navbar -->
+   <nav>
+    <div id="left">
+        <h3>STAFF</h3>
+        <div>
+            <a href="/assetlist/staff"><button>Asset list</button></a>
+            <a href="/Dashborad/staff"><button id="thispage">Dashboard</button></a>
+            <a href="/history/staff"><button>History</button></a>
+            <a href="/return"><button>Return</button></a>      
+        </div>
+    </div>
+    <div id="right">
+        <button onclick="logout()"><h6>Logout</h6></button>
+    </div>
+   </nav>
+
+    <!-- Dashboard -->
+    <div class="container mt-3">
+        <div class="d-flex justify-content-between bg p-3">
+            <div class="box d-flex ms-5">
+                <div class="st">
+                    <div class="container">
+                        <div class="dashboard">
+                            <div class="status me-5" id="Availble"></div>
+                            <h6>Availble</h6>
+                        </div>
+                        <div class="dashboard">
+                            <div class="status me-5" id="Disabled"></div>
+                            <h6>Disabled</h6>
+                        </div>
+                        <div class="dashboard">
+                            <div class="status me-5" id="Borrowed"></div>
+                            <h6>Borrowed</h6>
+                        </div>
+                        <div class="dashboard">
+                            <div class="status me-5" id="Handing"></div>
+                            <h6>Handing</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box">
+                <canvas id="myChart"></canvas>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script src="/public/js/JS.js"></script>
+    <script src="/public/js/dataDashborad.js"></script>
+    <script>
+        console.log(myid)
+    </script>
+    
+    
+    
+</body>
+
+</html>

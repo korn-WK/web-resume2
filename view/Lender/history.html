@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Finding</title>
+    <link rel="stylesheet" href="/public/css/lender/web.css">
+    <link rel="shortcut icon" href="/public/img/ICON2.png" type="image/x-icon">
+    <link rel="stylesheet" href="/public/bootstrap/css/bootstrap.min.css">
+    <script src="/public/bootstrap/js/bootstrap.min.js"></script>
+</head>
+
+<body style="background-color: #f9e7ef;">
+    <!-- navbar -->
+    <nav>
+        <div id="left">
+            <h3>Lender</h3>
+            <div>
+                <a href="/assetlist/lender"><button>Asset list</button></a>
+                <a href="/Dashborad/lender"><button id="thispage">Dashboard</button></a>
+                <a href="/request"><button>Requrst</button></a>
+                <a href="/history/lender"><button>History</button></a>
+            </div>
+        </div>
+        <div id="right">
+
+            <input type="text" placeholder="Search Here" id="Search">
+            <button id="logout" onclick="logout()">
+                <h6>logout</h6>
+            </button>
+        </div>
+    </nav>
+
+
+    <!-- Dashboard -->
+    <div class="container mt-3">
+        <div class="bg py-2 px-5" style="background-color: #FFBBDA;">
+            <!-- table -->
+            <div>
+                <table class="table table-striped table-hover mt-5">
+                    <thead>
+                        <tr>
+                            <th>Picture</th>
+                            <th>Asset Name</th>
+                            <th>Start Date</th>
+                            <th>End Date</th>
+                            <th>Borrower</th>
+                            <th>Status</th>
+
+                        </tr>
+                    </thead>
+                    <tbody id="display">
+
+                    </tbody>
+                </table>
+
+            </div>
+            <div class=" d-flex justify-content-end align-items-center mb-2" id="btnMY">
+                <button id="Back">Back</button>
+                <button id="next">Next</button>
+            </div>
+        </div>
+
+    </div>
+    </div>
+    <script src="/public/js/JS.js"></script>
+    <script>
+        let Alldata = ""
+        let currentPage = 1;
+        let totalPages = 7
+        var ser = document.getElementById('Search');
+        async function getdata(pageNumber,searchTerm) {
+            try {
+                let data = await fetch("/gethistor")
+                let mydata = await data.json()
+                serdata = mydata.filter(data => data.Lender_ID == myid)
+                Alldata = serdata.filter(element => element.assetName.toLowerCase().includes(searchTerm.toLowerCase()));
+                totalPages = Math.ceil(Alldata.length / 7);
+                console.log(Alldata)
+                currentPage = pageNumber;
+                const startIndex = (currentPage - 1) * 7;
+                const endIndex = Math.min(startIndex + 7, Alldata.length);
+                const tableBody = document.getElementById("display");
+
+                tableBody.innerHTML = "";
+                let display = "" // Clear table content
+                // console.log(Alldata)
+                for (let start = startIndex; start < endIndex; start++) {
+                    let Mystatus;
+                    let sh;
+                    if (Alldata[start].verify == "1") {
+                        Mystatus = "Available";
+                        sh = "Approve"
+                    } else if (Alldata[start].verify == "2") {
+                        Mystatus = "Disable";
+                        sh = "Disapprove"
+                    } else if (Alldata[start].verify == "0") {
+                        Mystatus = "Panding";
+                        sh = "Panding"
+                    } else if (Alldata[start].verify == "3") {
+                        Mystatus = "Available";
+                        sh = "Approve"
+                    }
+
+                    display += `
+                <tr>
+                    <td><img src="/public/img/DATA_IMG/${Alldata[start].Image}" alt="" style="margin: 0 auto; "></td>
+                    <td>${Alldata[start].assetName}</td>
+                    <td>${Alldata[start].formatted_Start_Date}</td>
+                    <td>${Alldata[start].formatted_End_Date}</td>
+                    <td>${Alldata[start].borrower_name}</td>
+                <td><div class="${Mystatus}" style="margin: auto;">${sh}</div></td>
+              </tr> `
+                    
+                    tableBody.innerHTML = display;
+
+                }
+            } catch (error) {
+                console.log(error)
+            }
+
+        }
+        getdata(1,"")
+        document.getElementById("next").addEventListener("click", () => {
+            if (currentPage < totalPages) {
+                getdata(currentPage + 1,ser.value);
+                console.log(currentPage)
+            }
+        });
+
+        document.getElementById("Back").addEventListener("click", () => {
+            if (currentPage > 1) {
+                getdata(currentPage - 1,ser.value);
+            }
+        });
+        ser.addEventListener("input", () => {
+                getdata(1,ser.value)
+            })
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,291 @@
+nav {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 100px;
+    align-items: center;
+
+}
+
+#left {
+    display: flex;
+    flex-direction: column;
+
+}
+
+#left h3 {
+    color: #5A9ABF;
+}
+
+nav button {
+    background-color: transparent;
+    border: none;
+    color: #604343;
+}
+
+#right {
+    color: #604343;
+
+}
+
+body {
+    background-color: #FCF6BD;
+    padding: 20px;
+}
+
+.bg {
+    background-color: #C0E4F6;
+    border-radius: 3rem;
+    min-width: 1000px;
+    min-height: 500px;
+    
+}
+
+#Search{
+    background-color: #FFD3E7;
+    width: 25rem;
+    height: 2rem;
+    border: none;
+    border-radius: 20px;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+input::placeholder {
+    color: #BD5E5E;
+}
+
+table {
+    border-radius: 20px;
+   
+}
+
+.Available {
+    width: 5.5rem;
+    background-color: #92FFBE;
+    text-align: center;
+    border-radius: 15px;
+
+}
+.Disable {
+    width: 5.5rem;
+    background-color: #FF8D8D;
+    text-align: center;
+    border-radius: 15px;
+
+}
+.Panding {
+    width: 5.5rem;
+    background-color: #FFB37B;
+    text-align: center;
+    border-radius: 15px;
+
+}
+.Brorrwed {
+    width: 5.5rem;
+    background-color: #EBFF9A;
+    text-align: center;
+    border-radius: 15px;
+
+}
+
+.Edit {
+    background-color: #FFBBDA;
+    border: none;
+    width: 5.5rem;
+    border-radius: 15px;
+}
+#Add {
+    background-color: #99CCEB;
+    border: none;
+    width: 5.5rem;
+    border-radius: 15px;
+}
+
+img {
+    height: 64px;
+    border-radius: 14px;
+}
+
+.table th {
+    background-color: #C0E4F6;
+    text-align: center;
+    
+}
+
+.table td{
+   
+    background-color: #F8F0FF;
+    text-align: center;
+    margin-top: 5rem;
+}
+#btnMY button{
+    border: none;
+    width: 10rem;
+    height: 2.5rem;
+    border-radius: 40px;
+    color: white;
+    background-color: #5A9ABF;
+    margin-left: 10px;
+}
+#btnMY{
+    margin-top: 20px;
+    margin-bottom: 2rem;
+}
+
+
+
+/* ------------------------ Add ------------------------*/
+#modalbox{
+    display: flex;
+    justify-content: space-around;
+    height: 300px;
+    align-items: center;
+
+}
+
+#addbtn{
+    border: none;
+    width: 5rem;
+    height: 1.5rem;
+    border-radius: 40px;
+    color: white;
+    background-color: #5A9ABF;
+    margin-left: 10px;
+    position:absolute;
+    bottom: 40px;
+    right: 50px;
+}
+/* ---- LEFT ---- */
+.modal-left{
+  flex: 0 0 50%;
+	max-width: 50%;
+	padding-left:80px;
+    align-self: start;
+    justify-content: center;
+}
+.modal-left.form-group {
+    margin-bottom: 15px;
+
+}
+#image-container{
+    width: 10px;
+    height: 20px;
+    margin-top: 15px;
+    color:#B77171;
+}
+
+#image-preview{
+    width: 200px;
+    height: 200px;
+    margin-top: 15px;
+   
+}
+
+/* ---- RIGHT ---- */
+.modal-right {
+  width: 100%;
+  padding: 35px;
+  
+}
+.modal-right.form-group {
+    margin-bottom: 15px;
+}
+.modal-right label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 15px;
+    color:#604343;
+    
+}
+.modal-right input[type="text"],
+.modal-right select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  background-color: #E8CFF8;;
+  color:#B77171;
+}
+.modal-footer .btn-secondary {
+    background-color: #ce656f;;
+    color:#ffffff;
+}
+
+.modal-footer .btn-primary{
+    background-color: #3da464;;
+    color:#ffffff;
+}
+
+
+
+/* ---------------------------- Edit --------------------------*/
+#modalboxx{
+    display: flex;
+    justify-content: space-around;
+    height: 350px;
+    align-items: center;
+
+}
+
+/* ---- LEFT ---- */
+.modal-leftt{
+  flex: 0 0 50%;
+	max-width: 50%;
+	padding:80px;
+
+}
+
+#img{
+    width: 200px;
+    height: 200px;
+   
+}
+
+/* ---- RIGHT ---- */
+.modal-rightt {
+  width: 40%;
+  padding: 20px;
+
+
+}
+.modal-rightt .form-groupp {
+    margin-bottom: 15px;
+}
+.modal-rightt label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 15px;
+    color:#604343;
+    
+}
+.modal-rightt input[type="text"],
+.modal-rightt select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  background-color: #FCF6BD;;
+  color:#B77171;
+}
+.modal-rightt .form-groupp .btn-available{
+    background-color: #B7EECC;;
+    color:#000000;
+}
+.modal-rightt .form-groupp .btn-disabled{
+    background-color: #FFBBDA;;
+    color:#000000;
+}
+
+.modal-footerr .button-rightt {
+    float: right;
+    background-color: #C0E4F6;;
+    color:#000000;
+    border: none;
+    width: 10rem;
+    height: 2.5rem;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+}
+   
+

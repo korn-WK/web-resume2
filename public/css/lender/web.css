@@ -1,0 +1,158 @@
+body {
+    
+    padding-bottom: 20px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 100px;
+    align-items: center;
+    
+
+}
+
+#left {
+    display: flex;
+    flex-direction: column;
+
+}
+
+#right h3 {
+    color: #5A9ABF;
+}
+
+nav button {
+    background-color: transparent;
+    border: none;
+    color: #604343;
+}
+
+#right {
+    color: #604343;
+
+}
+
+.bg {
+    border-radius: 3rem;
+    min-width: 1000px;
+    min-height: 500px;
+  
+}
+
+input {
+    background-color: #FFD3E7;
+    width: 25rem;
+    height: 2rem;
+    border: none;
+    border-radius: 20px;
+    padding: 15px;
+    box-sizing: border-box;
+    outline: none;
+}
+
+input::placeholder {
+    color: #BD5E5E;
+}
+
+table {
+    border-radius: 20px;
+
+}
+
+#Available {
+    width: 5.5rem;
+    background-color: #92FFBE;
+    text-align: center;
+    border-radius: 15px;
+
+}
+.Available {
+    width: 5.5rem;
+    background-color: #92FFBE;
+    text-align: center;
+    border-radius: 15px;
+
+}
+#Disable {
+    width: 5.5rem;
+    background-color: #FF8D8D;
+    text-align: center;
+    border-radius: 15px;
+
+}
+.Disable {
+    width: 5.5rem;
+    background-color: #FF8D8D;
+    text-align: center;
+    border-radius: 15px;
+
+}
+#Panding {
+    width: 5.5rem;
+    background-color: #FFB37B;
+    text-align: center;
+    border-radius: 15px;
+
+}
+#Brorrwed {
+    width: 5.5rem;
+    background-color: #EBFF9A;
+    text-align: center;
+    border-radius: 15px;
+
+}
+
+#Edit {
+    background-color: #FFBBDA;
+    border: none;
+    width: 5.5rem;
+    border-radius: 15px;
+}
+#Add {
+    background-color: #99CCEB;
+    border: none;
+    width: 5.5rem;
+    border-radius: 15px;
+}
+
+img {
+    height: 64px;
+    border-radius: 14px;
+}
+
+.table th {
+    background-color: #C0E4F6;
+    text-align: center;
+}
+
+.table td{
+
+    background-color: #F8F0FF;
+    text-align: center;
+}
+#btnMY button{
+    border: none;
+    width: 10rem;
+    height: 2.5rem;
+    border-radius: 40px;
+    color: white;
+    background-color: #5A9ABF;
+    margin-left: 10px;
+}
+#btnMY{
+    margin-top: 10px;
+}
+td button{
+    width: 5.9rem;
+    margin-right: 5px;
+    border: none;
+   
+    border-radius: 14px;
+}
+td .D{
+    background-color: #FF8D8D;
+}
+td .A{
+    background-color: #92FFBE;
+}

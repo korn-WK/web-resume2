@@ -1,0 +1,77 @@
+body {
+    background-color: #E9CFF9;
+}
+
+.bg {
+    background-color: white;
+    border-radius: 3rem;
+    min-width: 1000px;
+}
+
+.box {
+    width: 35rem;
+}
+nav button {
+    background-color: transparent;
+    border: none;
+    color: #604343;
+}
+.status {
+    width: 5.5rem;
+    height: 1.5rem;
+    border-radius: 2px;
+    display: inline-block;
+}
+h6{
+    display: inline-block;
+    color: #604343;
+}
+
+#Availble {
+    background-color: #a5dfdf;
+}
+
+#Disabled {
+    background-color: #FFB1C1;
+}
+
+#Borrowed {
+    background-color: #FFE6AA;
+}
+
+#Handing {
+    background-color: #FFB37B;
+}
+.st{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.dashboard{
+    margin-top: 20px;
+    margin-left: 50px;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    margin:  10px 100px;
+    align-items: center;
+    
+}
+#left{
+    display: flex;
+    flex-direction: column;
+    
+}
+#left h3{
+    color: #5A9ABF;
+}
+#left button{
+    background-color:transparent;
+    border: none;
+    color: #604343;
+}
+#right{
+    color: #604343;
+    
+}

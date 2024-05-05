@@ -1,0 +1,18 @@
+{
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon app.js",
+    "sever": "node app.js"
+  },
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "expess": "^0.0.1-security",
+    "express": "^4.19.2",
+    "express-session": "^1.18.0",
+    "init": "^0.1.2",
+    "memorystore": "^1.6.7",
+    "multer": "^1.4.5-lts.1",
+    "mysql2": "^3.9.3",
+    "nodemon": "^3.1.0"
+  }
+}

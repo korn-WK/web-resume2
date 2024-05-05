@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Finding</title>
+    <link rel="stylesheet" href="/public/bootstrap/css/bootstrap.min.css">
+    <script src="/public/bootstrap/js/bootstrap.min.js"></script>
+
+
+
+    <!-- ICON -->
+    <link rel="shortcut icon" href="/public/img/ICON2.png" type="image/x-icon">
+    <link rel="stylesheet" href="/public/css/Staff/assetlist.css">
+
+</head>
+
+<body>
+    <!-- navbar -->
+    <nav>
+        <div id="left">
+            <h3>STAFF</h3>
+            <div>
+                <a href="/assetlist/staff"><button>Asset list</button></a>
+                <a href="/Dashborad/staff"><button id="thispage">Dashboard</button></a>
+                <a href="/history/staff"><button>History</button></a>
+                <a href="/return"><button>Return</button></a>
+            </div>
+        </div>
+        <div id="right">
+            <button id="Add" data-bs-target="#ADD" data-bs-toggle="modal">Add</button>
+            <input type="text" placeholder="Search Here" id="Search">
+            <button onclick="logout()">
+                <h6>Logout</h6>
+            </button>
+        </div>
+    </nav>
+
+
+    <!-- Dashboard -->
+    <div class="container mt-3">
+        <div class="bg py-2 px-5">
+            <!-- table -->
+            <div>
+                <table class="table table-striped table-hover">
+                    <thead>
+                        <tr>
+                            <th>Asset ID</th>
+                            <th>Picture</th>
+                            <th>Asset Name</th>
+                            <th>Category</th>
+                            <th>Action</th>
+                            <th>Status</th>
+
+                        </tr>
+                    </thead>
+                    <tbody id="display">
+
+                    </tbody>
+                </table>
+
+            </div>
+            <div class=" d-flex justify-content-end align-items-center " id="btnMY">
+                <button id="Back">Back</button>
+                <button id="next">Next</button>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+
+
+
+
+
+
+    <!--EDIT-->
+    <!-- Modal Body -->
+
+    <div class="modal" id="EDIT" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" role="dialog"
+        -labelledby="modalTitleId" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalTitleId">
+                        EDIT
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+
+
+
+                    <div id="modalboxx">
+                        <div class="modal-leftt">
+                            <div id="img" style="height: auto;">
+
+                            </div>
+                        </div>
+                        <div class="modal-rightt">
+                            <form>
+                                <div class="form-groupp">
+                                    <label for="asset">Asset Name</label>
+                                    <input type="text" name="asset" id="asset" class="text">
+                                </div>
+                                <div class="form-groupp">
+                                    <label for="category">Category</label>
+                                    <select id="category" name="category" class="text">
+                                        <option value="non"></option>
+                                        <option value="book">Book</option>
+                                        <option value="borad game">borad game</option>
+                                        <option value="device">Device</option>
+                                    </select>
+                                </div>
+                                <div class="form-groupp">
+                                    <label for="status">Status</label>
+                                    <div id="shstatus">
+
+                                    </div>
+                                </div>
+                                <div class="form-groupp">
+                                    <div class="btn btn-available" id="Av">
+                                        Available
+                                    </div>
+                                    <div class="btn btn-disabled" id="Di">
+                                        Disabled
+                                    </div>
+                                </div>
+
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="modal-footerr">
+                    <button type="button" class="button button-rightt" data-bs-dismiss="modal"
+                        onclick="submitEdit()">Done</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+    <!--ADD -->
+
+    <!-- Modal Body -->
+    <div class="modal fade" id="ADD" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" role="dialog"
+        aria-labelledby="modalTitleId" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title modal-lg" id="modalTitleId">
+                        ADD
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+
+
+
+
+                    <div id="modalbox">
+                        <div class="modal-left">
+                            <div>
+                                <img id="image-preview" src="" alt="Image preview" style="height: 200px; width: auto;">
+                            </div>
+                            <div id="image-container">
+                                <form id="addmyimg">
+                                    <input type="file" name="file" id="image-input" accept="image/*">
+                                    <br>
+                                    <input type="submit" value="ADD" id="addbtn">
+                                </form>
+                            </div>
+
+
+                        </div>
+                        <div class="modal-right">
+
+                            <div class="form-group">
+                                <label for="newasset">Asset Name</label>
+                                <input type="text" name="asset" id="newasset" class="text">
+                            </div>
+                            <div class="form-group">
+                                <label for="addnewcategory">Category</label>
+                                <select id="addnewcategory" name="category" class="text">
+                                    <option value=""></option>
+                                    <option value="book">Book</option>
+                                    <option value="boardgame">Board game</option>
+                                    <option value="device">Device</option>
+                                </select>
+                            </div>
+
+
+                        </div>
+
+
+
+                    </div>
+                    <!-- <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                            Close
+                        </button>
+                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal"
+                            onclick="addasset()">Save</button>
+                    </div> -->
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Optional: Place to the bottom of scripts -->
+        <script>
+
+        </script>
+        <script src="/public/js/JS.js"></script>
+        <script src="/public/js/sweetalert2@11.js"></script>
+        <script src="/public/js/Staff/adds.js"></script>
+        <!-- <script src="/public/js/Staff/board game.js"></script> -->
+        <script>
+
+            let Alldata = ""
+            let mydataa = ""
+            let currentPage = 1;
+            let totalPages = 7
+            var ser = document.getElementById('Search');
+            async function getdata(pageNumber, searchTerm) {
+                try {
+
+                    let data = await fetch("/Assetlist")
+
+                    mydataa = await data.json()
+                    const Alldata = mydataa.filter(element => element.assetName.toLowerCase().includes(searchTerm.toLowerCase()));
+                    totalPages = Math.ceil(Alldata.length / 7);
+                    // console.log(Alldata)
+                    currentPage = pageNumber;
+                    const startIndex = (currentPage - 1) * 7;
+                    const endIndex = Math.min(startIndex + 7, Alldata.length);
+                    const tableBody = document.getElementById("display");
+
+                    tableBody.innerHTML = ""; // Clear table content
+
+                    for (let start = startIndex; start < endIndex; start++) {
+                        let Mystatus;
+                        if (Alldata[start].Status == "0") {
+                            Mystatus = "Available";
+                        } else if (Alldata[start].Status == "1") {
+                            Mystatus = "Disable";
+                        } else if (Alldata[start].Status == "3") {
+                            Mystatus = "Panding";
+                        } else if (Alldata[start].Status == "2") {
+                            Mystatus = "Brorrwed";
+                        }
+
+
+                        tableBody.innerHTML += `
+                        <tr>
+        <td>${Alldata[start].ID}</td>
+        <td><img src="/public/img/DATA_IMG/${Alldata[start].Image}" alt="" style="margin: 0 auto; "></td>
+        <td>${Alldata[start].assetName}</td>
+        <td>${Alldata[start].Category}</td>
+        <td><button class="Edit" onclick="Editfun(${Alldata[start].ID})">Edit</button></td>
+        <td><div class="${Mystatus}" style="margin: 0 auto;">${Mystatus}</div></td>
+      </tr>
+    `;
+                    }
+                } catch (error) {
+                    console.log(error)
+                }
+
+            }
+            getdata(1, "")
+            document.getElementById("next").addEventListener("click", () => {
+                if (currentPage < totalPages) {
+                    getdata(currentPage + 1 , ser.value);
+                    console.log(currentPage)
+                }
+            });
+
+            document.getElementById("Back").addEventListener("click", () => {
+                if (currentPage > 1) {
+                    getdata(currentPage - 1, ser.value);
+                }
+            });
+            const options = {
+                backdrop: "static",
+                keyboard: false,
+            };
+            const myModal1 = new bootstrap.Modal(
+                document.getElementById("ADD"),
+                options,
+            );
+            const myModal2 = new bootstrap.Modal(
+                document.getElementById("EDIT"),
+                options,
+            );
+            var index = -1
+            function Editfun(Id) {
+                ID = Id
+                index = mydataa.findIndex(function (Asset) {
+                    return ID == Asset.ID
+                })
+                // console.log(index)
+                const newName = document.querySelector('#asset')
+                const newCategory = document.querySelector('#category')
+
+                const img = document.getElementById("img");
+                const sta = document.getElementById("shstatus");
+                let Mystatus;
+                if (mydataa[index].Status == "0") {
+                    Mystatus = "Available";
+
+                } else if (mydataa[index].Status == "1") {
+                    Mystatus = "Disable";
+
+                } else if (mydataa[index].Status == "3") {
+                    Mystatus = "Panding";
+                } else if (mydataa[index].Status == "2") {
+                    Mystatus = "Brorrwed";
+                }
+                sta.innerHTML = `<div class="${Mystatus}" >${Mystatus}</div>`
+                newst = mydataa[index].Status
+                newName.value = mydataa[index].assetName
+                newCategory.value = mydataa[index].Category
+                document.getElementById('Av').onclick = function () {
+                    sta.innerHTML = `<div class="Available">Available</div>`
+                    newst = 0
+                }
+                document.getElementById('Di').onclick = function () {
+                    sta.innerHTML = `<div class="Disable">Disable</div>`
+                    newst = 1
+                }
+
+                img.innerHTML = `<img src='/public/img/DATA_IMG/${mydataa[index].Image}'style="width: 300px;height: auto;">`
+                myModal2.show()
+
+            }
+            // let newst
+            async function submitEdit() {
+                let update = { "assetName": "", "Category": "", "status": "", "id": "" }
+                const newName = document.querySelector('#asset')
+                const newCategory = document.querySelector('#category')
+                update.assetName = newName.value
+                update.Category = newCategory.value
+                update.id = ID
+
+                update.status = newst
+                console.log(update)
+                console.log(ID)
+                console.log(newst)
+                const options = {
+                    method: "PUT",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify(update)
+                }
+                try {
+                    const respones = await fetch('/Editassetlist', options)
+                    if (respones.ok) {
+                        Swal.fire({
+                            "icon": "success",
+                            "title": "Updated"
+                        })
+                        getdata(currentPage, "")
+                    }
+                    else {
+                        Swal.fire({
+                            "icon": "error",
+                            "title": await respones.text()
+                        })
+                    }
+
+                } catch (error) {
+                    console.error(error.message)
+                }
+
+            }
+            ser.addEventListener("input", () => {
+                getdata(1,ser.value)
+            })
+
+        </script>
+
+</body>
+
+</html>

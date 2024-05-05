@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Finding</title>
+    <link rel="stylesheet" href="/public/bootstrap/css/bootstrap.min.css">
+    <script src="/public/bootstrap/js/bootstrap.min.js"></script>
+    <link rel="shortcut icon" href="/public/img/ICON2.png" type="image/x-icon">
+    <link rel="stylesheet" href="/public/css/login.css">
+    <script src="/public/js/sweetalert2@11.js"></script>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="element">
+            <div id="regform">
+                <div id="form">
+                    <div>
+                        <div id="htext">stat for free</div>
+                        <h1>Register <span>.</span></h1>
+                    </div>
+                    <p>Alredy A Member?<button class="btn-text" id="gotologin">Login</button></p>
+                    <div id="NS">
+                        <input type="text" name="Name" id="Name" placeholder="Name" required>
+                        <input type="text" name="Lastname" id="Lastname" placeholder="Lastname" required>
+                    </div>
+                    <input type="email" name="newEmail" id="newEmail" placeholder="Email" required>
+                    <input type="password" name="newpassword" id="newpassword" placeholder="Password" required>
+                    <button class="Mybtn" id="REG">Register</button>
+                </div>
+            </div>
+
+            <div id="loginform">
+                <div id="form">
+                    <h1>Login <span>.</span></h1>
+                    <p>Are you not a member?<button class="btn-text" id="gotoreg">Register</button></p>
+                    <input type="email" name="Email" id="Email" placeholder="Email" required>
+                    <input type="password" name="password" id="Password" placeholder="Password" required>
+                    <button class="btn-text" id="forgot">Forgot your password</button>
+                    <button class="Mybtn" id="login">Login</button>
+                </div>
+            </div>
+            <div id="sild">
+                <div id="BBB">
+                    <img src="/public/img/14.png" alt="">
+                </div>
+                <div id="sun">
+                    <img src="/public/img/13.svg" alt="">
+                </div>
+                <div id="star">
+                    <img src="/public/img/11.png" alt="">
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+    <script src="/public/js/Login.js"></script>
+    <script>
+        document.querySelector('#login').addEventListener('click', async function () {
+            const Email = document.querySelector('#Email').value;
+            const Password = document.querySelector('#Password').value;
+            try {
+                const options = {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ "Email": Email, "Password": Password })
+                }
+                const response = await fetch('/login', options)
+                if (response.status == 200) {
+                    const data = await response.text()//convert to text
+                    location.replace(data)
+
+                }
+                else if (response.status == 401) {
+                     const data = await response.text()//convert to text
+                    // throw Error(data);
+                    Swal.fire({
+                        icon: "error",
+                        title: "Oops...",
+                        text: `${data}`,
+                       
+                    });
+                }
+                else if (response.status == 500) {
+                    const data = await response.text()//convert to text
+                    //throw Error(data);
+                    Swal.fire({
+                        icon: "error",
+                        title: "Oops...",
+                        text: `${data}`,
+                       
+                    });
+                }
+                else {
+                    Swal.fire({
+                        icon: "error",
+                        title: "Oops...",
+                        text: "connection error",
+                       
+                    });
+                }
+            } catch (error) {
+                alert(error.message)
+            }
+        });
+
+        document.querySelector('#REG').addEventListener('click', async function () {
+            const Email = document.querySelector('#newEmail').value;
+            const Password = document.querySelector('#newpassword').value;
+            const name = document.querySelector('#Name').value;
+            const lastname = document.querySelector('#Lastname').value;
+            if (Email && Password && name && lastname != "") {
+                try {
+                    const options = {
+                        method: "POST",
+                        headers: { "Content-Type": "application/json" },
+                        body: JSON.stringify({ "name": name, "lastname": lastname, "email": Email, "password": Password })
+                    }
+                    const response = await fetch('/register', options)
+                    if (response.status == 200) {
+                        const data = await response.text()//convert to text
+                        location.replace('/')
+
+                    }
+                    else if (response.status == 401) {
+                        const data = await response.text()//convert to text
+                        Swal.fire({
+                        icon: "error",
+                        title: "Oops...",
+                        text: `${data}`,
+                       
+                    });
+                    }
+                    else if (response.status == 500) {
+                        const data = await response.text()//convert to text
+                        Swal.fire({
+                        icon: "error",
+                        title: "Oops...",
+                        text: `${data}`,
+                       
+                    });
+                    }
+                    else {
+                        Swal.fire({
+                        icon: "error",
+                        title: "Oops...",
+                        text: "connection error",
+                       
+                    });
+                    }
+                } catch (error) {
+                    alert(error.message)
+                }
+            } else {
+                Swal.fire({
+                        icon: "error",
+                        title: "Oops...",
+                        text: "You haven't filled in your information yet.",
+                    })
+            }
+        });
+
+    </script>
+</body>
+
+</html>

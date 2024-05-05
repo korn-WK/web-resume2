@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Finding</title>
+    <link rel="stylesheet" href="/public/css/lender/web.css">
+    <link rel="shortcut icon" href="/public/img/ICON2.png" type="image/x-icon">
+    <link rel="stylesheet" href="/public/bootstrap/css/bootstrap.min.css">
+    <script src="/public/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/public/js/sweetalert2@11.js"></script>
+</head>
+
+<body style="background-color: #92FFBE;">
+    <!-- navbar -->
+    <nav>
+        <div id="left">
+            <h3>Lender</h3>
+            <div>
+                <a href="/assetlist/lender"><button>Asset list</button></a>
+                <a href="/Dashborad/lender"><button id="thispage">Dashboard</button></a>
+                <a href="/request"><button>Requrst</button></a>
+                <a href="/history/lender"><button>History</button></a>
+            </div>
+        </div>
+        <div id="right"><input type="text" placeholder="Search Here" id="Search">
+            <button id="logout" onclick="logout()">
+                <h6>logout</h6>
+            </button>
+        </div>
+    </nav>
+
+
+    <!-- Dashboard -->
+    <div class="container mt-3">
+        <div class="bg py-2 px-5" style="background-color: #E8CFF8;">
+            <!-- table -->
+            <div>
+                <table class="table table-striped table-hover mt-5">
+                    <thead class="">
+                        <tr>
+                            <th>Picture</th>
+                            <th>Asset Name</th>
+                            <th>Start Date</th>
+                            <th>End Date</th>
+                            <th>Borrower Name</th>
+                            <th>Action</th>
+
+                        </tr>
+                    </thead>
+                    <tbody id="display">
+
+                    </tbody>
+                </table>
+
+            </div>
+            <div class=" d-flex justify-content-end align-items-center mb-2" id="btnMY">
+                <button id="Back">Back</button>
+                <button id="next">Next</button>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <!-- <script src="/public/js/lensder/Requrst.js"></script> -->
+    <script src="/public/js/JS.js"></script>
+    <script>
+        var ser = document.getElementById('Search');
+        let Alldata = ""
+        let currentPage = 1;
+        let totalPages = 7;
+        async function getdata(pageNumber,searchTerm) {
+            try {
+                let data = await fetch("/getrequest")
+                serdata = await data.json()
+                const Alldata = serdata.filter(element => element.assetName.toLowerCase().includes(searchTerm.toLowerCase()));
+                totalPages = Math.ceil(Alldata.length / 7);
+                // console.log(Alldata)
+                currentPage = pageNumber;
+                const startIndex = (currentPage - 1) * 7;
+                const endIndex = Math.min(startIndex + 7, Alldata.length);
+                const tableBody = document.getElementById("display");
+
+                tableBody.innerHTML = ""; // Clear table content
+
+                for (let start = startIndex; start < endIndex; start++) {
+
+
+                    tableBody.innerHTML += `
+      <tr>
+        
+        <td><img src="/public/img/DATA_IMG/${Alldata[start].Image}" alt=""></td>
+        <td>${Alldata[start].assetName}</td>
+        <td>${Alldata[start].formatted_Start_Date}</td>
+        <td>${Alldata[start].formatted_End_Date}</td>
+        <td>${Alldata[start].Name}</td>
+        <td><button class = "A" onclick=verify(${Alldata[start].ID},1,'${Alldata[start].formatted_Start_Date}','${Alldata[start].formatted_End_Date}')>Approve</button><button class = "D"onclick=verify(${Alldata[start].ID},2,'${Alldata[start].formatted_Start_Date}','${Alldata[start].formatted_End_Date}')>Disapprove</button></td>
+      </tr>
+    `;
+                }
+            } catch (error) {
+                console.log(error)
+            }
+
+        }
+        getdata(1,"")
+        document.getElementById("next").addEventListener("click", () => {
+            if (currentPage < totalPages) {
+                getdata(currentPage + 1,ser.value);
+                console.log(currentPage)
+            }
+        });
+
+        document.getElementById("Back").addEventListener("click", () => {
+            if (currentPage > 1) {
+                getdata(currentPage - 1,ser.value);
+            }
+        });
+        ser.addEventListener("input", () => {
+                getdata(1,ser.value)
+            })
+
+        async function verify(id, v,sdate,edate) {
+            // console.log(id, v, reqis,sdate,edate)
+            Swal.fire({
+                title: "Are you sure?",
+                text: "You won't be able to revert this!",
+                icon: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#3085d6",
+                cancelButtonColor: "#d33",
+                confirmButtonText: "Yes"
+            }).then(async (result) => {
+                if (result.isConfirmed) {
+                    Swal.fire({
+                        title: "Done",
+                        text: "Your requrst has been verify.",
+                        icon: "success"
+                    });
+                    try {
+                        const options = {
+                            method: "POST",
+                            headers: { "Content-Type": "application/json" },
+                            body: JSON.stringify({ "verify": v, "Asset_ID": id, "Lender_ID": myid,"sdate":sdate,"edate":edate })
+                        }
+                        const response = await fetch('/verify', options)
+                        if (response.status == 200) {
+                            const data = await response.text()//convert to text
+                            getdata(1,ser.value)
+
+                        }
+                        else if (response.status == 500) {
+                            const data = await response.text()//convert to text
+                            //throw Error(data);
+                            Swal.fire({
+                                icon: "error",
+                                title: "Oops...",
+                                text: `${data}`,
+
+                            });
+                        }
+
+                    } catch (error) {
+                        alert(error.message)
+                    }
+                }
+            });
+
+        }
+    </script>
+
+</body>
+
+</html>
